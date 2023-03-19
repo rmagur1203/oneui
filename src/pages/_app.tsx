@@ -1,6 +1,14 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import { Status } from "@/components/status";
+import { Bar } from "@/components/status/bar";
+import { Page } from "@/components/status/page";
+import "@/styles/globals.scss";
+import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Status />
+      <Component {...pageProps} />
+    </>
+  );
 }
